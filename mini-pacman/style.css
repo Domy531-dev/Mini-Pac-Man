@@ -1,0 +1,43 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 2px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background-color: #111;
+  border: 1px solid #333;
+  position: relative;
+}
+
+.wall {
+  background-color: #0055ff;
+}
+
+.point::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: yellow;
+  border-radius: 50%;
+  top: 16px;
+  left: 16px;
+}
+
+.pacman {
+  background: yellow;
+  border-radius: 50%;
+}
